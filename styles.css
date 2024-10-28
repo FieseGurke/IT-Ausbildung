@@ -248,7 +248,7 @@ nav ul li a:hover {
   font-size: 18px;  /* Beispielgröße */
   color: #555;  /* Beispiel-Farbe */
   font-family: 'Arial', sans-serif;  /* Beispiel-Schriftart */
-  /* Weitere Styles wie gewünscht */
+  text-align: center;  /* Textausrichtung */
 }
 
 .container {
