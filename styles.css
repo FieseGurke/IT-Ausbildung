@@ -234,7 +234,7 @@ nav ul li a:hover {
 }
 
 .flashcard-back {
-    background-color: #007BFF;
+    background-color: #53a6ffc2;
     color: white;
     transform: rotateY(180deg);
     text-align: center;
