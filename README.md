@@ -1,2 +1,2 @@
 # IT-Ausbildung
-Vorbereitung für die Abschlussprüfungen
+Vorbereitung für die Abschlussprüfungen und Wiederholung.
