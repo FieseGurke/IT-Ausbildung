@@ -244,6 +244,13 @@ nav ul li a:hover {
     transform: rotateY(180deg);
 }
 
+.flashcard-title {
+  font-size: 18px;  /* Beispielgröße */
+  color: #555;  /* Beispiel-Farbe */
+  font-family: 'Arial', sans-serif;  /* Beispiel-Schriftart */
+  /* Weitere Styles wie gewünscht */
+}
+
 .container {
     display: flex;
     flex-direction: column;
