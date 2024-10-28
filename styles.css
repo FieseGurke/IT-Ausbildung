@@ -235,7 +235,6 @@ nav ul li a:hover {
 
 .flashcard-back {
     background-color: #419afa;
-    color: white;
     transform: rotateY(180deg);
     text-align: center;
 }
@@ -245,9 +244,9 @@ nav ul li a:hover {
 }
 
 .flashcard-title {
-  font-size: 18px;  /* Beispielgröße */
-  color: #555;  /* Beispiel-Farbe */
-  font-family: 'Arial', sans-serif;  /* Beispiel-Schriftart */
+  font-size: 20px;  
+  color: #555;  
+  font-family: 'Arial', sans-serif; 
   text-align: center;  /* Textausrichtung */
 }
 
