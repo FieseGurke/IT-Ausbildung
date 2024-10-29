@@ -33,6 +33,7 @@
             <li>OSI-Modell</li>
             <li>FCP-IP-Modell</li>
         </ul>
+        <p>Beide Netzwerkprotokoll-Modelle unterscheiden sich nur im Aufbau (7 Schichten vs 4 Schichten)</p>
         <h2>OSI-Modell</h2>
         <p>ist ein Schichtmodell, das beschreibt, wie Computer untereinander kommunizieren:</p>
         <div class="container0">
@@ -68,21 +69,32 @@
             </div>
         </div>
         
+        <div class="merksatz">
+            <h3><u>Merksatz</u></h3>
+            <h4>Für die Englischen Begriffe:</h4>
+            <p><b>P</b>lease <b>D</b>o <b>N</b>ot <b>S</b>alami - <b>P</b>izza <b>A</b>away!</p>
+
+            <h4>Für die Deutschen Begriffe:</h4>
+            <p><b>A</b>lle <b>D</b>eutschen <b>S</b>chüler <b>T</b>rinken - <b>V</b>erschiedene <b>S</b>orten <b>B</b>ier</p>
+        </div>
+
         <h3>Protokollbeispiel</h3>
-        <table class="tabelle-eins">
+        <table class="protokollbeispiel">
             <tr>
                 <th>Nr.</th>
-                <th>OSI-Modell Schichtname<br> (deutsch und englisch)</th>
+                <th>OSI-Modell Schichtname<br> 
+                    (deutsch und englisch)</th>
                 <th>Protokollbeispiel</th>
                 <th>Kapselung oder Einheit (PDU)</th>
                 <th>Gerät bzw. Kopplungselement</th>
             </tr>
             <tr>
                 <td>7</td>
-                <td><b>Anwendungs</b>schicht<br> (Application-Layer)</td>
-                <td rowspan="3">HTTP,<br> FTP,<br> LDAP</td>
+                <td><b>Anwendungs</b>schicht<br> 
+                    (Application-Layer)</td>
+                <td rowspan="3">HTTP, FTP, LDAP</td>
                 <td rowspan="3">Daten</td>
-                <td rowspan="4" class="highlight">Proxy, Gateway</td>
+                <td rowspan="4">Proxy, Gateway</td>
             </tr>
             <tr>
                 <td>6</td>
@@ -108,18 +120,80 @@
             <tr> 
                 <td>2</td>
                 <td><b>Sicherungs</b>schicht<br> (Data Link-Layer)</td>
-                <td rowspan="2">Ethernet, FDDI, Token Ring</td>
+                <td rowspan="2">Ethernet, FDDI,<br> Token Ring</td>
                 <td>Rahmen (Frames)</td>
                 <td>Bridge, Switch</td> 
             </tr>
             <tr> 
                 <td>1</td>
                 <td><b>Bitübertragungs</b>schicht<br> (Physical-Layer)</td>
+                <td style="display:none;"></td>
                 <td>Bits</td>
                 <td>Repeater, Hub</td> 
             </tr>
         </table>
+
+        <div class="protocoludptcp">
+            <h2>Transportschicht → Protokolle → UDP, TCP</h2>
+            <h3>UDP (User Datagram Protocol)</h3>
+            <ul> 
+                <li>Geeignet für Anwendungen, die fehlertolerant sind</li>
+                <li>Kein Mechanismen zur Prüfung von Paketverlust</li>
+             </ul> 
+            <h3>TCP (Transmission Control Protocol)</h3>
+            <ul> 
+                <li>Verbindungsorientiert und zuverlässig</li>
+                <li>Stellt sicher, dass alle Daten vollständig und in der richtigen Reihenfolge übertragen werden.</li>
+            </ul>
+        </div>
+        <h1>TCP/IP-Modell</h1>
+        <table class="tcp-ip-tabelle">
+            <tr>
+                <th colspan="3">DOD / TCP-IP-Modell (vergl. Schichten im OSI-Modell)</th>
+                <th>Beispiele</th>
+            </tr>
+            <tr>
+                <td>4</td>
+                <td><b>Process / Aplication</b></td>
+                <td>7-5</td>
+                <td>Telnet, FTP, SMTP</td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td><b>Host-to-Host / Transport</b></td>
+                <td>4</td>
+                <td>TCP, UDP</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td><b>Vermittlungsschicht</b></td>
+                <td>3</td>
+                <td>IP, IPX</td>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td><b>Sicherungsschicht</b></td>
+                <td>2 - 1</td>
+                <td>Ethernet</td>
+            </tr>
+        </table>   
+
+        <h2>Was ist TCP/IP?</h2>
+        <p>Transmission Controll Protocol (TCP)/ Internet Protocol (IP), auch bekannt als DoD-Schichtmodell</p>
+        <ul> 
+            <li>Ist zuständig für die Vermittlung und Transport von Datenpaketen innerhalb eines globalen, dezentral organisierten Netzwerks.</li>
+            <li>Heute Standard für die Kommunikation im Internet</li>
+        </ul> 
+
+        <h2>TCP/IP im DoD- und OSI-Schichtmodell</h2>
+        <ul> 
+            <li>Eine unverzichtbare Stütze für alle Kommunikationsverbindungen.<br>
+                Vor allem die Transport- und Vermittlungsschichten können ohne die Protokollfamilie nicht funktionieren.</li>
+        </ul> 
+
+
     </div>
+
 
 
 <!-- ##########################################################################################################
@@ -129,7 +203,7 @@ Thema 2 - IPv4
     <div id="thema2" class="content">
         <h1>Internet Protocol Version 4 (IPv4)</h1>
 
-<h2> Kurzer Überblick </h2>
+        <h2> Kurzer Überblick </h2>
         <ul>
             <li>Entwickelt in den 1980er Jahren</li>
             <li>IPv4-Adresse besteht aus 4 Oktetten</li>
@@ -334,93 +408,93 @@ Thema 2 - IPv4
 
 
     
-    <h1>Netzwerk-ID und Host-ID</h1>
-    <p>Bei der Aufteilung einer IP-Adresse in Netzwerk- und Host-Anteile spielen zwei wichtige Konzepte eine Rolle: die <b>Netzwerk-ID</b> und die <b>Host-ID</b>.</p>
-    <h2>Netzwerk-ID</h2>
-    <p>Diese ist der Teil der IP-Adresse, der das Netzwerk identifiziert. Er wird durch die Bits bestimmt, die in der Subnetzmaske auf 1 gesetzt sind. Alle Geräte im selben Netzwerk teilen sich die gleiche Netzwerk-ID.</p>
-    <h2>Host-ID</h2>
-    <p>Dies ist der Teil der IP-Adresse, der ein spezifisches Gerät innerhalb des Netzwerks identifiziert. Er wird durch die Bits bestimmt, die in der Subnetzmaske auf 0 gesetzt sind. Jedes Gerät im Netzwerk muss eine einzigartige Host-ID haben.</p>
-    <p><b>Beispiel:</b><br>
-    Betrachten wir die IP-Adresse 192.168.1.100 mit der Subnetzmaske 255.255.255.0 (oder /24 in CIDR-Notation):</p>
+        <h1>Netzwerk-ID und Host-ID</h1>
+        <p>Bei der Aufteilung einer IP-Adresse in Netzwerk- und Host-Anteile spielen zwei wichtige Konzepte eine Rolle: die <b>Netzwerk-ID</b> und die <b>Host-ID</b>.</p>
+        <h2>Netzwerk-ID</h2>
+        <p>Diese ist der Teil der IP-Adresse, der das Netzwerk identifiziert. Er wird durch die Bits bestimmt, die in der Subnetzmaske auf 1 gesetzt sind. Alle Geräte im selben Netzwerk teilen sich die gleiche Netzwerk-ID.</p>
+        <h2>Host-ID</h2>
+        <p>Dies ist der Teil der IP-Adresse, der ein spezifisches Gerät innerhalb des Netzwerks identifiziert. Er wird durch die Bits bestimmt, die in der Subnetzmaske auf 0 gesetzt sind. Jedes Gerät im Netzwerk muss eine einzigartige Host-ID haben.</p>
+        <p><b>Beispiel:</b><br>
+        Betrachten wir die IP-Adresse 192.168.1.100 mit der Subnetzmaske 255.255.255.0 (oder /24 in CIDR-Notation):</p>
         <ul>
             <li><b>Netzwerk-ID:</b> 192.168.1.0</li>
             <li><b>Host-ID:</b> 0.0.0.100</li>
         </ul>
-    <p>In diesem Fall sind die ersten 24 Bits (3 Bytes) die Netzwerk-ID, und die letzten 8 Bits (1 Byte) bilden die Host-ID. Die Aufteilung in Netzwerk-ID und Host-ID ermöglicht eine effiziente Routing-Entscheidung und die Organisation von Geräten innerhalb eines Netzwerks.</p>
-    <h1>CIDR-Notation</h1>
-    <p>In den frühen Tagen des Internets wurden IPv4-Adressen in verschiedene Klassen unterteilt, um Netzwerke nach ihrer Größe zu kategorisieren. Dieses System war als klassenbasiertes Netzwerk bekannt. Die IPv4-Adressen wurden in fünf Klassen unterteilt, wobei jede Klasse eine unterschiedliche Anzahl an Netzwerken und Hosts unterstützen konnte:</p>
-    <p>Mit <b>CIDR</b> wurde ein flexibler Ansatz zur Adressierung entwickelt, um die starren Klassen A, B und C zu umgehen. CIDR drückt die Subnetzmaske als Suffix aus, indem die Anzahl der Bits angegeben wird, die den Netzwerkanteil darstellen.</p>
-    <h2>Beispiel:</h2>
-    <p>192.168.1.0/24 bedeutet, dass die ersten 24 Bits für das Netzwerk reserviert sind und die restlichen 8 Bits für Hosts innerhalb des Netzwerks verwendet werden. Dies ergibt ein Subnetz mit 256 möglichen Adressen.</p>
-    <p><b>Binäre und Dezimale Darstellung von /24:</b><br>
-    <code>/24 → 11111111.11111111.11111111.00000000 → 255.255.255.0</code></p>
-    <h1>VLSM (Variable Length Subnet Mask)</h1>
-    <p>Mit <b>VLSM</b> kann man Subnetze unterschiedlicher Größe innerhalb eines Netzwerks erstellen. Dies macht die Netzwerksegmentierung effizienter, indem nur die notwendige Anzahl von Adressen für jedes Subnetz reserviert wird.</p>
-    <h2>Beispiel:</h2>
-    <ul>
-        <li>Class-C Netzwerk: 192.168.1.0/24</li>
-        <li>Subnet 1: 192.168.1.0/26 (64 Adressen) /26 → 6 Bits übrig → 2<sup>6</sup> = 64</li>
-        <li>Subnet 2: 192.168.1.64/26 (64 Adressen) /26 → 6 Bits übrig → 2<sup>6</sup> = 64</li>
-        <li>Subnet 3: 192.168.1.128/27 (32 Adressen) /27 → 5 Bits übrig → 2<sup>5</sup> = 32</li>
-    </ul>
-    <p><b>Mit VLSM kann man also viel präziser Adressen zuweisen und Verschwendung vermeiden.</b></p>
-    <h1>Private IPv4-Adressen und NAT</h1>
-    <p><b>Private IPv4-Adressen</b> sind dazu da, um den begrenzten öffentlichen Adressraum zu schonen und sind im Internet nicht erreichbar. Diese Adressen werden in internen Netzwerken verwendet. Die reservierten Bereiche für private Adressen in verschiedenen Klassen sind:</p>
-    <b>Netzwerk Klassen</b>
-    <ul>
-        <li><b>Klasse A:</b> 10.0.0.0 bis 10.255.255.255</li>
-        <li><b>Klasse B:</b> 172.16.0.0 bis 172.31.255.255</li>
-        <li><b>Klasse C:</b> 192.168.0.0 bis 192.168.255.255</li>
-    </ul>
-    <p>Ein typisches Beispiel für eine private Adresse in Heimnetzwerken ist: <b>192.168.1.1.</b></p>
-    <h2>Verbindung zwischen privaten Adressen und NAT</h2>
-    <p><b>NAT</b> wird verwendet, um Geräte mit privaten IP-Adressen mit dem Internet zu verbinden, indem private IP-Adressen in eine öffentliche IP-Adresse übersetzt werden, die im Internet verwendet werden kann.<br> Dadurch können mehrere Geräte mit einer einzigen öffentlichen IP-Adresse über das Internet kommunizieren.</p>
-    <p><b>Beispiel NAT</b><br>
+        <p>In diesem Fall sind die ersten 24 Bits (3 Bytes) die Netzwerk-ID, und die letzten 8 Bits (1 Byte) bilden die Host-ID. Die Aufteilung in Netzwerk-ID und Host-ID ermöglicht eine effiziente Routing-Entscheidung und die Organisation von Geräten innerhalb eines Netzwerks.</p>
+        <h1>CIDR-Notation</h1>
+        <p>In den frühen Tagen des Internets wurden IPv4-Adressen in verschiedene Klassen unterteilt, um Netzwerke nach ihrer Größe zu kategorisieren. Dieses System war als klassenbasiertes Netzwerk bekannt. Die IPv4-Adressen wurden in fünf Klassen unterteilt, wobei jede Klasse eine unterschiedliche Anzahl an Netzwerken und Hosts unterstützen konnte:</p>
+        <p>Mit <b>CIDR</b> wurde ein flexibler Ansatz zur Adressierung entwickelt, um die starren Klassen A, B und C zu umgehen. CIDR drückt die Subnetzmaske als Suffix aus, indem die Anzahl der Bits angegeben wird, die den Netzwerkanteil darstellen.</p>
+        <h2>Beispiel:</h2>
+        <p>192.168.1.0/24 bedeutet, dass die ersten 24 Bits für das Netzwerk reserviert sind und die restlichen 8 Bits für Hosts innerhalb des Netzwerks verwendet werden. Dies ergibt ein Subnetz mit 256 möglichen Adressen.</p>
+        <p><b>Binäre und Dezimale Darstellung von /24:</b><br>
+        <code>/24 → 11111111.11111111.11111111.00000000 → 255.255.255.0</code></p>
+        <h1>VLSM (Variable Length Subnet Mask)</h1>
+        <p>Mit <b>VLSM</b> kann man Subnetze unterschiedlicher Größe innerhalb eines Netzwerks erstellen. Dies macht die Netzwerksegmentierung effizienter, indem nur die notwendige Anzahl von Adressen für jedes Subnetz reserviert wird.</p>
+        <h2>Beispiel:</h2>
+        <ul>
+            <li>Class-C Netzwerk: 192.168.1.0/24</li>
+            <li>Subnet 1: 192.168.1.0/26 (64 Adressen) /26 → 6 Bits übrig → 2<sup>6</sup> = 64</li>
+            <li>Subnet 2: 192.168.1.64/26 (64 Adressen) /26 → 6 Bits übrig → 2<sup>6</sup> = 64</li>
+            <li>Subnet 3: 192.168.1.128/27 (32 Adressen) /27 → 5 Bits übrig → 2<sup>5</sup> = 32</li>
+        </ul>
+        <p><b>Mit VLSM kann man also viel präziser Adressen zuweisen und Verschwendung vermeiden.</b></p>
+        <h1>Private IPv4-Adressen und NAT</h1>
+        <p><b>Private IPv4-Adressen</b> sind dazu da, um den begrenzten öffentlichen Adressraum zu schonen und sind im Internet nicht erreichbar. Diese Adressen werden in internen Netzwerken verwendet. Die reservierten Bereiche für private Adressen in verschiedenen Klassen sind:</p>
+        <b>Netzwerk Klassen</b>
+        <ul>
+            <li><b>Klasse A:</b> 10.0.0.0 bis 10.255.255.255</li>
+            <li><b>Klasse B:</b> 172.16.0.0 bis 172.31.255.255</li>
+            <li><b>Klasse C:</b> 192.168.0.0 bis 192.168.255.255</li>
+        </ul>
+        <p>Ein typisches Beispiel für eine private Adresse in Heimnetzwerken ist: <b>192.168.1.1.</b></p>
+        <h2>Verbindung zwischen privaten Adressen und NAT</h2>
+        <p><b>NAT</b> wird verwendet, um Geräte mit privaten IP-Adressen mit dem Internet zu verbinden, indem private IP-Adressen in eine öffentliche IP-Adresse übersetzt werden, die im Internet verwendet werden kann.<br> Dadurch können mehrere Geräte mit einer einzigen öffentlichen IP-Adresse über das Internet kommunizieren.</p>
+        <p><b>Beispiel NAT</b><br>
         PC_A hat eine private IP-Adresse und ist mit dem Router verbunden. Der Router hat eine öffentliche IP-Adresse [mit Internet verbunden].</p>
-    <p>Will PC_A also mit einem externen Server_XY [im Internet] kommunizieren, so geht dies über den Router. Der Router merkt sich, wer die Anfrage an den Server_XY geschickt hat, damit der Router weiß, an wen er die Antwort (Datenpaket) von Server_XY schicken soll und es somit nicht an PC_B landet.</p>
-    <h1>NAT (Network Address Translation)</h1>
-    <p><b>NAT</b> ist eine Technik, die hauptsächlich in IPv4-Netzwerken verwendet wird, um viele private IP-Adressen in einem Netzwerk auf eine oder wenige öffentliche IP-Adressen abzubilden.</p>
-    <h2>Zweck von NAT</h2>
-    <p>Es hilft, <b>öffentliche IP-Adressen</b> zu sparen, indem es ermöglicht, dass ein Netzwerk mit privaten Adressen (z.B. 192.168.0.0/24) über eine einzige öffentliche Adresse kommunizieren kann.</p>
-    <h2>Typen von NAT</h2>
-    <ul>
-        <li><b>Static NAT:</b> Eine private IP-Adresse wird auf eine öffentliche IP-Adresse eins zu eins abgebildet.</li>
-        <li><b>Dynamic NAT:</b> Eine Gruppe von öffentlichen IP-Adressen wird dynamisch verschiedenen privaten IP-Adressen zugewiesen.</li>
-        <li><b>Port Address Translation (PAT):</b> Mehrere private IP-Adressen teilen sich eine einzige öffentliche IP-Adresse, wobei die Zuordnung über verschiedene Ports erfolgt.</li>
-    </ul>
-    <p><b>Beispiel:</b> Router weist dann den PC einen Port zu 192.168.0.1:42365</p>
-    <h1>DHCP (Dynamic Host Configuration Protocol)</h1>
-    <p><b>DHCP</b> ist ein Protokoll, das zur automatischen Zuweisung von IP-Adressen an Geräte in einem Netzwerk verwendet wird. Anstatt jedem Gerät eine statische IP-Adresse zuzuweisen, verteilt ein DHCP-Server Adressen aus einem vordefinierten Pool.</p>
-    <h2>Vorteile von DHCP</h2>
-    <ul>
-        <li><b>Automatische und dynamische Zuweisung von IP-Adressen</b></li>
-        <li><b>Vermeidung von IP-Adressenkonflikten</b></li>
-        <li><b>Reduzierung des Verwaltungsaufwands</b></li>
-    </ul>
-    <h2>Lease Time</h2>
-    <p>Die vom DHCP-Server zugewiesenen IP-Adressen sind nur für eine begrenzte Zeit, die sogenannte <b>Lease Time</b>, gültig. Nach Ablauf dieser Zeit muss das Gerät entweder eine neue IP-Adresse anfordern oder die bestehende erneuern.</p>
-    <h1>Vorteile und Herausforderungen von IPv4</h1>
-    <h2>Vorteile von IPv4</h2>
-    <ul>
-        <li><b>Weit verbreitet:</b> IPv4 ist das am weitesten verbreitete Protokoll und wird von nahezu allen Geräten und Netzwerken unterstützt.</li>
-        <li><b>Einfachheit:</b> IPv4 ist relativ einfach zu implementieren und zu verstehen.</li>
-        <li><b>NAT-Unterstützung:</b> Die Nutzung von NAT ermöglicht eine sparsame Nutzung der begrenzten öffentlichen IP-Adressen. (mehr oder weniger als Vorteil)</li>
-    </ul>
-    <h2>Herausforderungen bei IPv4</h2>
-    <ul>
-        <li><b>Adressknappheit:</b> IPv4 bietet nur etwa 4,3 Milliarden Adressen, was zu einer Knappheit führt, insbesondere mit der wachsenden Anzahl von Geräten. (IPv4-Adressen mieten kostet Geld)</li>
-        <li><b>Sicherheitsprobleme:</b> IPv4 bietet standardmäßig keine Sicherheitsfunktionen wie Verschlüsselung. Sicherheit muss durch zusätzliche Protokolle wie IPsec implementiert werden.</li>
-        <li><b>Komplexität durch NAT:</b> NAT kann die Netzwerkverwaltung und Fehlersuche erschweren, da es zu einer Übersetzung der Adressen führt, die den Netzwerkverkehr unübersichtlicher macht.</li>
-    </ul>
-    <h2>Zusammenfassung der IPv4-Schlüsselkonzepte</h2>
-    <p><b>Adressformat:</b> 32-Bit, dezimal</p>
-    <p><b>Adressierungstypen:</b> Unicast, Multicast, Broadcast</p>
-    <p><b>Private Adressen:</b> Nicht im Internet erreichbar, verwendet für lokale Netzwerke</p>
-    <p><b>Subnetting:</b> Aufteilen von Netzwerken, um sie effizienter zu nutzen</p>
-    <p><b>CIDR und VLSM:</b> Flexiblere Aufteilung von Netzwerken, um Adressen effizienter zu verwenden (z.B. /24)</p>
-    <p><b>NAT:</b> Erlaubt mehreren Geräten, über eine öffentliche IP-Adresse zu kommunizieren</p>
-    <p><b>DNS:</b> Wandelt Domain-Namen in IP-Adressen um</p>
-    <p><b>DHCP:</b> Automatische Zuweisung von IP-Adressen</p>
+        <p>Will PC_A also mit einem externen Server_XY [im Internet] kommunizieren, so geht dies über den Router. Der Router merkt sich, wer die Anfrage an den Server_XY geschickt hat, damit der Router weiß, an wen er die Antwort (Datenpaket) von Server_XY schicken soll und es somit nicht an PC_B landet.</p>
+        <h1>NAT (Network Address Translation)</h1>
+        <p><b>NAT</b> ist eine Technik, die hauptsächlich in IPv4-Netzwerken verwendet wird, um viele private IP-Adressen in einem Netzwerk auf eine oder wenige öffentliche IP-Adressen abzubilden.</p>
+        <h2>Zweck von NAT</h2>
+        <p>Es hilft, <b>öffentliche IP-Adressen</b> zu sparen, indem es ermöglicht, dass ein Netzwerk mit privaten Adressen (z.B. 192.168.0.0/24) über eine einzige öffentliche Adresse kommunizieren kann.</p>
+        <h2>Typen von NAT</h2>
+        <ul>
+            <li><b>Static NAT:</b> Eine private IP-Adresse wird auf eine öffentliche IP-Adresse eins zu eins abgebildet.</li>
+            <li><b>Dynamic NAT:</b> Eine Gruppe von öffentlichen IP-Adressen wird dynamisch verschiedenen privaten IP-Adressen zugewiesen.</li>
+            <li><b>Port Address Translation (PAT):</b> Mehrere private IP-Adressen teilen sich eine einzige öffentliche IP-Adresse, wobei die Zuordnung über verschiedene Ports erfolgt.</li>
+        </ul>
+        <p><b>Beispiel:</b> Router weist dann den PC einen Port zu 192.168.0.1:42365</p>
+        <h1>DHCP (Dynamic Host Configuration Protocol)</h1>
+        <p><b>DHCP</b> ist ein Protokoll, das zur automatischen Zuweisung von IP-Adressen an Geräte in einem Netzwerk verwendet wird. Anstatt jedem Gerät eine statische IP-Adresse zuzuweisen, verteilt ein DHCP-Server Adressen aus einem vordefinierten Pool.</p>
+        <h2>Vorteile von DHCP</h2>
+        <ul>
+            <li><b>Automatische und dynamische Zuweisung von IP-Adressen</b></li>
+            <li><b>Vermeidung von IP-Adressenkonflikten</b></li>
+            <li><b>Reduzierung des Verwaltungsaufwands</b></li>
+        </ul>
+        <h2>Lease Time</h2>
+        <p>Die vom DHCP-Server zugewiesenen IP-Adressen sind nur für eine begrenzte Zeit, die sogenannte <b>Lease Time</b>, gültig. Nach Ablauf dieser Zeit muss das Gerät entweder eine neue IP-Adresse anfordern oder die bestehende erneuern.</p>
+        <h1>Vorteile und Herausforderungen von IPv4</h1>
+        <h2>Vorteile von IPv4</h2>
+        <ul>
+            <li><b>Weit verbreitet:</b> IPv4 ist das am weitesten verbreitete Protokoll und wird von nahezu allen Geräten und Netzwerken unterstützt.</li>
+            <li><b>Einfachheit:</b> IPv4 ist relativ einfach zu implementieren und zu verstehen.</li>
+            <li><b>NAT-Unterstützung:</b> Die Nutzung von NAT ermöglicht eine sparsame Nutzung der begrenzten öffentlichen IP-Adressen. (mehr oder weniger als Vorteil)</li>
+        </ul>
+        <h2>Herausforderungen bei IPv4</h2>
+        <ul>
+            <li><b>Adressknappheit:</b> IPv4 bietet nur etwa 4,3 Milliarden Adressen, was zu einer Knappheit führt, insbesondere mit der wachsenden Anzahl von Geräten. (IPv4-Adressen mieten kostet Geld)</li>
+            <li><b>Sicherheitsprobleme:</b> IPv4 bietet standardmäßig keine Sicherheitsfunktionen wie Verschlüsselung. Sicherheit muss durch zusätzliche Protokolle wie IPsec implementiert werden.</li>
+            <li><b>Komplexität durch NAT:</b> NAT kann die Netzwerkverwaltung und Fehlersuche erschweren, da es zu einer Übersetzung der Adressen führt, die den Netzwerkverkehr unübersichtlicher macht.</li>
+        </ul>
+        <h2>Zusammenfassung der IPv4-Schlüsselkonzepte</h2>
+        <p><b>Adressformat:</b> 32-Bit, dezimal</p>
+        <p><b>Adressierungstypen:</b> Unicast, Multicast, Broadcast</p>
+        <p><b>Private Adressen:</b> Nicht im Internet erreichbar, verwendet für lokale Netzwerke</p>
+        <p><b>Subnetting:</b> Aufteilen von Netzwerken, um sie effizienter zu nutzen</p>
+        <p><b>CIDR und VLSM:</b> Flexiblere Aufteilung von Netzwerken, um Adressen effizienter zu verwenden (z.B. /24)</p>
+        <p><b>NAT:</b> Erlaubt mehreren Geräten, über eine öffentliche IP-Adresse zu kommunizieren</p>
+        <p><b>DNS:</b> Wandelt Domain-Namen in IP-Adressen um</p>
+        <p><b>DHCP:</b> Automatische Zuweisung von IP-Adressen</p>
 
         <h2>Was man wissen sollte:</h2>
         <ul>
