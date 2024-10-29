@@ -99,7 +99,6 @@ h3 {
 .transport-oriented {
     background-color: #ffe599;
 }
-
  /* Ende OSI-Tabelle*/   
 
 
@@ -255,6 +254,118 @@ nav ul li a:hover {
     flex-direction: column;
     gap: 50px; /* Abstand zwischen den Karten */
 }
+
+
+
+
+.merksatz h3 {
+    font-size: 24px; /* Schriftgröße ändern */
+    color: #333;
+    margin-top: 50px;
+    margin-bottom: 5px;
+}
+.merksatz h4 {
+    font-size: 20px; /* Schriftgröße ändern */
+    color: #333;
+
+    margin-top: 24px;
+    margin-bottom: 1px;
+}
+
+.merksatz p {
+    font-size: 20px; /* Schriftgröße ändern */
+    color: #333;
+
+}
+
+/* Protokollbeispiel */ 
+.protokollbeispiel { 
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px; /* Abstand oben */ 
+} 
+
+.protokollbeispiel th, .protokollbeispiel td {
+    border: 1px solid #000;
+    padding: 8px; text-align: left;
+}
+
+.protokollbeispiel th {
+    background-color: #f2f2f2;
+}
+
+.protokollbeispiel td:first-child {
+    background-color: #f5cb71;
+    text-align: center;
+}
+
+.protokollbeispiel td:nth-child(2) {
+    background-color: #ffeb99;
+}
+
+.protokollbeispiel td:nth-child(3) {
+    background-color: #99bbff;
+}
+
+.protokollbeispiel td:nth-child(4) {
+    background-color: #698eff;
+}
+
+.protokollbeispiel td:nth-child(5) {
+    background-color: #a3a2a2;
+}
+
+
+
+
+.protocoludptcp h2{
+    font-size: 20px;
+    color: #333;
+    margin-top: 50px;
+    margin-bottom: 5px;
+}
+
+.protocoludptcp h3{
+    font-size: 20px;
+    color: #333;
+    margin-top: 25px;
+    margin-bottom: 0px;
+}
+
+
+/* TCP-IP Tabelle */
+.tcp-ip-tabelle { 
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px; /* Abstand oben */
+} 
+
+.tcp-ip-tabelle th, .tcp-ip-tabelle td {
+    border: 1px solid #000;
+    padding: 8px; text-align: left;
+}
+
+.tcp-ip-tabelle th {
+    background-color: #f2f2f2;
+}
+
+.tcp-ip-tabelle td:nth-child(1) {
+    background-color: #f5cb71;
+    text-align: center;
+}
+
+.tcp-ip-tabelle td:nth-child(2) {
+    background-color: #ffeb99;
+} 
+
+.tcp-ip-tabelle td:nth-child(3) {
+    background-color: #99bbff;
+} 
+
+.tcp-ip-tabelle td:nth-child(4) {
+    background-color: #698eff;
+} 
+
 
 @media (max-width: 600px) {
     nav ul li a {
