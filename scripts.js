@@ -2,6 +2,14 @@ document.addEventListener('DOMContentLoaded', function () {
     showContent('home');
 });
 
+// Darkmode
+
+function toggleMode() {
+  document.body.classList.toggle('dark-mode');
+}
+
+// Darkmode Ende
+
 function showContent(id) {
     var contents = document.querySelectorAll('.content');
     contents.forEach(function (content) {
@@ -19,3 +27,31 @@ flashcards.forEach(function (flashcard) {
         return false; // Ensure no default scrolling happens
     });
 });
+
+
+function toggleOSI() {
+    var x = document.getElementById("OSI");
+    if (x.style.display === "none") {
+      x.style.display = "block";
+    } else {
+      x.style.display = "none";
+    }
+  }
+  
+  function toggleExample() {
+    var x = document.getElementById("example");
+    if (x.style.display === "none") {
+      x.style.display = "block";
+    } else {
+      x.style.display = "none";
+    }
+  }
+
+  function toggleTCPIP() {
+    var x = document.getElementById("TCPIP");
+    if (x.style.display === "none") {
+      x.style.display = "block";
+    } else {
+      x.style.display = "none";
+    }
+  }
