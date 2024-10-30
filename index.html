@@ -15,7 +15,10 @@
             <li><a href="#thema3" onclick="showContent('thema3')">IPv6</a></li>
             <li><a href="#flashcards" onclick="showContent('flashcards')">Karteikarten</a></li>
         </ul>
+        <button onclick="toggleMode()"> Dark Mode Light</button>
     </nav>
+  
+
     <div id="home" class="content">
         <h1>Inhaltsverzeichnis</h1>
         <ul>
@@ -26,14 +29,14 @@
         </ul>
     </div>
 
+
+
     <div id="thema1" class="content">
         <h1>Netzwerkprotokoll-Modelle</h1>
-        <p>Es gibt zwei grundlegende Netzwerkprotokoll-Modelle:</p>
-        <ul>
-            <li>OSI-Modell</li>
-            <li>FCP-IP-Modell</li>
-        </ul>
-        <p>Beide Netzwerkprotokoll-Modelle unterscheiden sich nur im Aufbau (7 Schichten vs 4 Schichten)</p>
+        <p>Zwei grundlegende Netzwerkprotokoll-Modelle:</p>
+        <a href="javascript:void(0);" onclick="toggleOSI()" class="button_Netzwerkprotokoll-Modelle">OSI-Modell</a>
+        <div id="OSI" class="hidden_osi">
+        
         <h2>OSI-Modell</h2>
         <p>ist ein Schichtmodell, das beschreibt, wie Computer untereinander kommunizieren:</p>
         <div class="container0">
@@ -133,19 +136,29 @@
             </tr>
         </table>
 
-        <div class="protocoludptcp">
-            <h2>Transportschicht → Protokolle → UDP, TCP</h2>
-            <h3>UDP (User Datagram Protocol)</h3>
-            <ul> 
-                <li>Geeignet für Anwendungen, die fehlertolerant sind</li>
-                <li>Kein Mechanismen zur Prüfung von Paketverlust</li>
-             </ul> 
-            <h3>TCP (Transmission Control Protocol)</h3>
-            <ul> 
-                <li>Verbindungsorientiert und zuverlässig</li>
-                <li>Stellt sicher, dass alle Daten vollständig und in der richtigen Reihenfolge übertragen werden.</li>
-            </ul>
+ 
+        <a href="javascript:void(0);" onclick="toggleExample()" class="button_beispiel">Beispiel zu OSI-Modell</a>
+        <div id="example" class="hidden_beispiel">
+            <h2>Besuch einer Webseite (HTTP)</h2> 
+            <p><b>Schicht 7: Anwendungsschicht (Application Layer)</b><br>
+                Der Benutzer gibt eine URL im Browser ein, was eine http-Anfrage an den Webserver auslöst.</p>
+                <p><b>Schicht 6: Darstellungsschicht (Presentation Layer)</b><br>
+                    Die Anfrage wird in ein standardisiertes Format gebracht (z.B. UTF-8), das vom Server verstanden wird.</p>
+                    <p><b>Schicht 5: Sitzungsschicht (Session Layer)</b><br>
+                        Eine Sitzung wird zwischen dem Browser und dem Webserver aufgebaut, um die Anfrage zu verarbeiten.</p>
+                        <p><b>Schicht 4: Transportschicht (Transport Layer)</b><br>
+                            TCP teilt die Daten in Segmente auf, nummeriert sie und stellt sicher, dass sie korrekt ankommen.</p>
+                            <p><b>Schicht 3: Vermittlungsschicht (Network Layer)</b><br>
+                                Die Datenpakete werden mit der Ziel-IP-Adresse des Webservers versehen und über das Internet geroutet.</p>
+                                <p><b>Schicht 2: Sicherungsschicht (Data Link Layer)</b><br>
+                                    Die Frames werden erstellt und an die physikalische Schicht übergeben.</p>
+                                    <p><b>Schicht 1: Bitübertragungsschicht (Physical Layer)</b><br>
+                                        Die Bits werden als elektrische oder optische Signale über das physische Medium übertragen.</p> 
         </div>
+        </div>
+
+        <a href="javascript:void(0);" onclick="toggleTCPIP()" class="button_Netzwerkprotokoll-Modelle">TCP/IP</a>
+        <div id="TCPIP" class="hidden_beispiel">
         <h1>TCP/IP-Modell</h1>
         <table class="tcp-ip-tabelle">
             <tr>
@@ -178,8 +191,12 @@
             </tr>
         </table>   
 
-        <h2>Was ist TCP/IP?</h2>
-        <p>Transmission Controll Protocol (TCP)/ Internet Protocol (IP), auch bekannt als DoD-Schichtmodell</p>
+        <h2>Was ist TCP/IP (DoD-Schichtmodell)?</h2>
+        <p>TCP steht für Transmission Controll Protocol und IP für Internet Protocol.</p>
+        <p>Bei TCP handelt es sich um ein Satz von Regeln, die Computer verwenden, um miteinander im Internet zu kommunizieren.
+            Es sorgt dafür, dass die Pakete korrekt und in der richtigen Reihenfolge ankommen.
+            IP liefert nur die Pakete von einem Computer zum anderen.
+        </p>
         <ul> 
             <li>Ist zuständig für die Vermittlung und Transport von Datenpaketen innerhalb eines globalen, dezentral organisierten Netzwerks.</li>
             <li>Heute Standard für die Kommunikation im Internet</li>
@@ -190,6 +207,30 @@
             <li>Eine unverzichtbare Stütze für alle Kommunikationsverbindungen.<br>
                 Vor allem die Transport- und Vermittlungsschichten können ohne die Protokollfamilie nicht funktionieren.</li>
         </ul> 
+    </div>
+
+
+
+
+
+
+
+
+        <div class="protocoludptcp">
+            <h2>Transportschicht/Host-to-Host-Schicht → Protokolle → verschiedene Ansätze der Übertragung → UDP, TCP</h2>
+            <h3>UDP (User Datagram Protocol)</h3>
+            <ul> 
+                <li>Geeignet für Anwendungen, die fehlertolerant sind</li>
+                <li>Kein Mechanismen zur Prüfung von Paketverlust</li>
+             </ul> 
+            <h3>TCP (Transmission Control Protocol)</h3>
+            <ul> 
+                <li>Verbindungsorientiert und zuverlässig</li>
+                <li>Stellt sicher, dass alle Daten vollständig und in der richtigen Reihenfolge übertragen werden.</li>
+            </ul>
+        </div>
+    </ul>
+    <p>Beide Netzwerkprotokoll-Modelle unterscheiden sich nur im Aufbau (7 Schichten vs 4 Schichten)</p>
 
 
     </div>
