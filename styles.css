@@ -115,13 +115,13 @@ h3 {
 }
 
 .header-transport{
-    background-color: #bad6b1;
+    background-color: #3ba165 !important;
     font-size: 19px; /* Schriftgröße ändern */
     text-decoration: underline; /* Text unterstreichen */
 }
 
 .header-anwendung{
-    background-color: #eacf7f;
+    background-color: #d6b962 !important;
     font-size: 19px; /* Schriftgröße ändern */
     text-decoration: underline; /* Text unterstreichen */
 }
@@ -132,11 +132,11 @@ h3 {
 }
 
 .application-oriented {
-    background-color: #d9ead3;
+    background-color: #60ac45 !important;
 }
 
 .transport-oriented {
-    background-color: #ffe599;
+    background-color: #e6c35b !important;
 }
  /* Ende OSI-Tabelle*/   
 
